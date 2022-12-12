@@ -17,6 +17,7 @@ html{
   --accent: #e7e9fc;
   --card-set-gap: 20px;
   --button-focus:#404BBF;
+  --icon-fill: #8E8F99;
 }
 
 /*#region-- general settings-- */
@@ -356,6 +357,11 @@ display: block;
     padding: 16px 32px;
     border-radius: 4px;
 }
+.hero-button:hover,
+.hero-button:focus{
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 
 /* #region hero */
 
@@ -398,6 +404,7 @@ display: flex;
          
           display: block;
           padding: 120px 0px;
+          margin-bottom: 120px;
           
         }
         /* заголовок сотрудников*/
@@ -419,7 +426,9 @@ display: flex;
 /*  Зміна ВІДСТУПУ p and h2*/
 
 .team-text{
-
+border-radius: 0px 0px 4px 4px;
+  border:0.5px solid var(--);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   
   padding-top: 32px;
   padding-bottom:32px;
@@ -432,7 +441,9 @@ justify-content: center;
  .team-item .quality-list{
   text-align: center;
 }
-
+.quality-title-paragraph{
+  margin-bottom: 8px;
+}
 /* #endregion*/
 
 
@@ -440,17 +451,74 @@ justify-content: center;
 /*  Footer */
 
 .bottom{
+  display: flex;
   padding: 100px 0px;
+  
+  
+}
+.logo-container{
+  display: inline-block;
+  
+  margin-right: 120px;
+ 
 }
 
-
 .bottom-text{
-  
   margin-top: 16px;
   justify-content: flex-start;
   width: 264px;
  
 }
+
+
+/* заголовок */
+.footer-icon-title {
+  font-family: "Roboto", sans-serif;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: normal;
+  color: #ffffff;
+  margin-bottom: 16px;
+
+}
+
+ .footer-media{
+  display: inline-block; 
+  
+}
+.tester{
+  display: flex;
+  align-items: baseline;
+}
+.block-icon-footer {
+  display: flex;
+  gap: 24px;
+ 
+  
+
+}
+
+.footer-icon {
+  
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background-color:  rgba(255, 255, 255, 0.1);
+  justify-content: center;
+  align-items: center;
+  fill: var(--light);
+
+}
+
+.footer-icon:hover,
+.footer-icon:focus {
+  background-color: #31D0AA;
+  fill: var(--white-text);
+} 
 
 
  
@@ -468,9 +536,14 @@ margin-bottom: 72px;
 .button-primary{
 border: 1px solid var(--accent);
 border-radius: 4px;
+
 }
  .sorting .item+.item {
   margin-left: 24px;
+}
+.button-primary:hover ,
+.button-primary:focus{
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* Основной контент портфолио */
 
@@ -481,7 +554,15 @@ border-radius: 4px;
   row-gap: 48px;
   justify-content: flex-start;
 }
-
+.galery-cards{
+  border: 0.5px solid var(--light);
+   
+}
+.galery-cards:hover,
+.galery-cards:focus{
+  border: 0.5px solid var(--light);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 .galery-text{
   
   padding: 32px 16px;
@@ -506,28 +587,41 @@ border-radius: 4px;
 }     
 
 /* -- Hm 4 --*/
+/* hero */
+.section-hero{
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+  url(/images/people-office.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size:cover;
+}
+
 /* -- Quality --*/
+
 .box{
   
   background-color: var(--light);
   width:264px; 
   height:112px;
+  fill: var(--dark);
+  border-radius: 4px;
+ margin-bottom: 8px;
  
     display: flex;
       justify-content: center;
       align-items: center;
 }
-.icon-quality{
-  display: flex;
-    justify-content: center;
-    align-items: center;
+.box:hover,
+.box:focus{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 /* -- team icon --*/
 
 .block-icon-team{
   display: flex;
-  outline: 2px solid tomato;
-  /* fill: red; */
+  
+ 
   gap: 24px;
   padding: 0 16px;
 
@@ -537,38 +631,50 @@ border-radius: 4px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  outline: 2px solid tomato;
-  background-color: blue;
-  fill: red;
+  
+  background-color: var(--primary-brand);
+  justify-content: center;
+    align-items: center;
+    fill: var(--light);
+   
+}
 
+/* --  customers --*/
+.customers .secondary-title{
+  text-align: center;
+  margin-bottom: 72px;;
+}
+.customers-box{
+  display: flex;
+gap: 24px;
+  padding: 0 16px;
+  padding-bottom: 120px;
   
 }
-/* 
-.block-icon-team{
-display: flex;
-  width: 232px;
-  height: 48px;
-  outline: 2px solid tomato;
-  padding: 0 auto;
-  margin: 0 auto;
+/* .customers-box:not(:last-child){
+  margin-left:24px;
+} */
+.customers-link{
+     display: flex;
+      width: 168px;
+      height: 88px;
+      border-radius: 4px;
+      justify-content: center;
+      align-items: center;
+      fill: var(--icon-fill);
+      border: 0.5px solid var(--icon-fill);
 }
-.team-icon {
-  display: flex;
-  width: 40px;
-    height: 40px;
-
-gap: 24px;
-
-} 
- .icon-parameters{
-    display: block;
-    outline: 2px solid tomato;
-   
-     border-radius: 50%;
-      fill: red;
+.customers-link:hover
+{
+  border:0.5px solid var(--primary-brand);
+    fill: var(--primary-brand);
     
-    
-     
+}
 
-}  */
+.customers-box .customers-link:focus{
+    border: 0.5px solid var(--primary-brand);
+      fill: var(--primary-brand);
+}
+/* footer icon*/
 
+ 
